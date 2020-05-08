@@ -10,9 +10,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar (
-        title: Text ("TugasPakfahrul2"),
-      ),
       bottomNavigationBar: BottomNavyBar(),
     ); 
   }
@@ -32,13 +29,11 @@ class BottomNavyBarState extends State<BottomNavyBar> with SingleTickerProviderS
   @override
   void initState() {
     super.initState();
-    // Initialize the Tab Controller
     controller = TabController(length: 3, vsync: this);
   }
 
   @override
   void dispose() {
-    // Dispose of the Tab Controller
     controller.dispose();
     super.dispose();
   }
@@ -46,29 +41,15 @@ class BottomNavyBarState extends State<BottomNavyBar> with SingleTickerProviderS
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Appbar
-      appBar: AppBar(
-        // Title
-        title: Text("Tugaspakfahrul3"),
-        // Set the background color of the App Bar
-        backgroundColor: Colors.blue,
-      ),
-      // Set the TabBar view as the body of the Scaffold
       body: TabBarView(
-        // Add tabs as widgets
         children: <Widget>[LocationTab(), ProfileTab(), HomeTab()],
-        // set the controller
         controller: controller,
       ),
-      // Set the bottom navigation bar
       bottomNavigationBar: Material(
-        // set the color of the bottom navigation bar
         color: Colors.blue,
-        // set the tab bar as the child of bottom navigation bar
         child: TabBar(
           tabs: <Tab>[
             Tab(
-              // set icon to the tab
               icon: Icon(Icons.location_on),
             ),
             Tab(
@@ -78,7 +59,6 @@ class BottomNavyBarState extends State<BottomNavyBar> with SingleTickerProviderS
               icon: Icon(Icons.home),
             ),
           ],
-          // setup the controller
           controller: controller,
         ),
       ),
