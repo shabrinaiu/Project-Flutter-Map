@@ -15,11 +15,9 @@ class HomePage extends StatelessWidget {
   }
 }
 
-
 class BottomNavyBar extends StatefulWidget {
   @override
   BottomNavyBarState createState() => BottomNavyBarState();
-  
 }
 
 class BottomNavyBarState extends State<BottomNavyBar> with SingleTickerProviderStateMixin {
@@ -46,7 +44,8 @@ class BottomNavyBarState extends State<BottomNavyBar> with SingleTickerProviderS
         controller: controller,
       ),
       bottomNavigationBar: Material(
-        color: Colors.blue,
+        elevation: 5.0,
+        color: Colors.white,
         child: TabBar(
           tabs: <Tab>[
             Tab(
@@ -56,7 +55,7 @@ class BottomNavyBarState extends State<BottomNavyBar> with SingleTickerProviderS
               icon: Icon(Icons.person),
             ),
             Tab(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.notifications),
             ),
           ],
           controller: controller,
