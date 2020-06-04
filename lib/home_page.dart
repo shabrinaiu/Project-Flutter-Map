@@ -21,7 +21,6 @@ class BottomNavyBar extends StatefulWidget {
 }
 
 class BottomNavyBarState extends State<BottomNavyBar> with SingleTickerProviderStateMixin {
- // Create a tab controller
   TabController controller;
 
   @override
@@ -45,7 +44,7 @@ class BottomNavyBarState extends State<BottomNavyBar> with SingleTickerProviderS
       ),
       bottomNavigationBar: Material(
         elevation: 5.0,
-        color: Colors.white,
+        color: Color.fromRGBO(58, 66, 86, 1.0),
         child: TabBar(
           tabs: <Tab>[
             Tab(

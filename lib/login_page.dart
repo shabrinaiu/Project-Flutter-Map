@@ -16,14 +16,14 @@ class _LoginPageState extends State<LoginPage> {
       child: CircleAvatar(
         backgroundColor: Colors.transparent,
         radius: 48.0,
-        child: Image.asset('assets/images/profile.jpg'),
+        child: Image.asset('assets/logo.jpg'),
       ),
     );
 
     final email = TextFormField(
       keyboardType: TextInputType.emailAddress,
       autofocus: false,
-      initialValue: 'shabrina@gmail.com',
+      initialValue: 'fanus@gmail.com',
       decoration: InputDecoration(
         hintText: 'Email',
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
@@ -50,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
           elevation: 5.0,
           minWidth: 200.0,
           height: 42.0,
-          color: Colors.blue,
+          color: Color.fromRGBO(64, 75, 96, .9),
           onPressed: () {
             Navigator.of(context).pushNamed(HomePage.tag);
           },
@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
       body: Center(
         child: ListView(
           shrinkWrap: true,

@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: new ThemeData(primarySwatch: Colors.blue, fontFamily: 'Nunito'),
+      theme: new ThemeData(
+          primaryColor: Color.fromRGBO(58, 66, 86, 1.0), fontFamily: 'Raleway'),
       home: new LoginPage(),
       routes: routes,
     );
