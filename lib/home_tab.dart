@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:maptravo/model/listProblem.dart';
+import 'package:maptravo/models/models.dart';
 
 class HomeTab extends StatelessWidget {
   @override
