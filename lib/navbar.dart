@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:maptravo/home_tab.dart';
+import 'package:maptravo/notification_tab.dart';
 import 'package:maptravo/location_tab.dart';
 import 'package:maptravo/profile_tab.dart';
 
@@ -39,7 +39,7 @@ class BottomNavyBarState extends State<BottomNavyBar> with SingleTickerProviderS
   Widget build(BuildContext context) {
     return Scaffold(
       body: TabBarView(
-        children: <Widget>[LocationTab(), ProfileTab(), HomeTab()],
+        children: <Widget>[LocationTab(), ProfileTab(), NotificationTab()],
         controller: controller,
       ),
       bottomNavigationBar: Material(

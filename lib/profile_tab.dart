@@ -2,7 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 class ProfileTab extends StatelessWidget {
-  static String tag = 'Profile-Page';
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Flutter Demo',
+      theme: new ThemeData(
+          primaryColor: Color.fromRGBO(58, 66, 86, 1.0), fontFamily: 'Raleway'),
+      home: new ProfileTabs(title: 'Profile'),
+    );
+  }
+}
+
+class ProfileTabs extends StatefulWidget {
+  ProfileTabs({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _ProfileTabState createState() => _ProfileTabState();
+}
+
+class _ProfileTabState extends State<ProfileTabs> {
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +72,7 @@ class ProfileTab extends StatelessWidget {
     final topAppBar = AppBar(
       elevation: 0.1,
       backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
-      title: Text('Profile Page'),
+      title: Text(widget.title),
     );
 
     return Scaffold(

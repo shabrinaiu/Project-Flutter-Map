@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:maptravo/home_page.dart';
+import 'package:maptravo/navbar.dart';
 
 class LoginPage extends StatefulWidget {
   static String tag = 'login-page';
@@ -16,56 +16,59 @@ class _LoginPageState extends State<LoginPage> {
       child: CircleAvatar(
         backgroundColor: Colors.transparent,
         radius: 48.0,
-        child: Image.asset('assets/logo.jpg'),
+        child: new Image.asset('assets/logo.jpg'),
       ),
     );
 
     final email = TextFormField(
+      style: TextStyle(color: Colors.white),
       keyboardType: TextInputType.emailAddress,
       autofocus: false,
       initialValue: 'fanus@gmail.com',
       decoration: InputDecoration(
         hintText: 'Email',
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5.0),
+          borderSide: const BorderSide(color: Colors.white, width: 1.0),
+        ),
       ),
     );
 
     final password = TextFormField(
+      style: TextStyle(color: Colors.white),
       autofocus: false,
       initialValue: 'password',
       obscureText: true,
       decoration: InputDecoration(
         hintText: 'Password',
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0),
+        borderSide: const BorderSide(color: Colors.white, width: 1.0),
+        ),
       ),
     );
 
-    final loginButton = Padding(
-      padding: EdgeInsets.symmetric(vertical: 16.0),
-      child: Material(
-        child: MaterialButton(
-          shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(22.0) ),
-          elevation: 5.0,
-          minWidth: 200.0,
-          height: 42.0,
-          color: Color.fromRGBO(64, 75, 96, .9),
-          onPressed: () {
-            Navigator.of(context).pushNamed(HomePage.tag);
-          },
-          child: Text(
-            'Log In',
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
+    final loginButton = FlatButton(
+      color: Color.fromRGBO(64, 75, 96, .9),
+      textColor: Colors.white,
+      disabledColor: Colors.grey,
+      disabledTextColor: Colors.black,
+      padding: EdgeInsets.all(8.0),
+      splashColor: Colors.yellow,
+      onPressed: () {
+        Navigator.of(context).pushNamed(HomePage.tag);
+      },
+      child: Text(
+        "Login",
+        style: TextStyle(fontSize: 20.0, color: Colors.white),
       ),
     );
 
     final forgotLabel = FlatButton(
       child: Text(
         'Forgot Password',
-        style: TextStyle(color: Colors.black54),
+        style: TextStyle(color: Colors.grey),
       ),
       onPressed: () {},
     );

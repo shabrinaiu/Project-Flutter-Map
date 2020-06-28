@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:maptravo/model/listProblem.dart';
+import 'package:maptravo/models/models.dart';
 
-class HomeTab extends StatelessWidget {
+class NotificationTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'Flutter Demo',
       theme: new ThemeData(
           primaryColor: Color.fromRGBO(58, 66, 86, 1.0), fontFamily: 'Raleway'),
-      home: new ListPage(title: 'listProblems'),
+      home: new ListPage(title: 'Problems'),
       // home: DetailPage(),
     );
   }
