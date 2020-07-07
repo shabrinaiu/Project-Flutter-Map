@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
       padding: EdgeInsets.all(8.0),
       splashColor: Colors.yellow,
       onPressed: () {
-        Navigator.of(context).pushNamed(HomePage.tag);
+        Navigator.of(context).pushNamed(NavBar.tag);
       },
       child: Text(
         "Login",

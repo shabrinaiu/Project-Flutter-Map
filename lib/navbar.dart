@@ -4,23 +4,23 @@ import 'package:maptravo/notification_tab.dart';
 import 'package:maptravo/location_tab.dart';
 import 'package:maptravo/profile_tab.dart';
 
-class HomePage extends StatelessWidget {
-  static String tag = 'home-page';
+class NavBar extends StatelessWidget {
+  static String tag = 'Navbar';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavyBar(),
+      bottomNavigationBar: BottomNavBar(),
     ); 
   }
 }
 
-class BottomNavyBar extends StatefulWidget {
+class BottomNavBar extends StatefulWidget {
   @override
-  BottomNavyBarState createState() => BottomNavyBarState();
+  BottomNavBarState createState() => BottomNavBarState();
 }
 
-class BottomNavyBarState extends State<BottomNavyBar> with SingleTickerProviderStateMixin {
+class BottomNavBarState extends State<BottomNavBar> with SingleTickerProviderStateMixin {
   TabController controller;
 
   @override
