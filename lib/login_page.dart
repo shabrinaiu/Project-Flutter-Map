@@ -12,11 +12,11 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     final logo = Hero(
-      tag: 'hero',
+      tag: 'pak_tukang',
       child: CircleAvatar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         radius: 48.0,
-        child: new Image.asset('assets/logo.jpg'),
+        child: new Image.asset('assets/pak_tukang-02.png'),
       ),
     );
 
@@ -50,12 +50,11 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     final loginButton = FlatButton(
-      color: Color.fromRGBO(64, 75, 96, .9),
+      color: Color(0xFF80E1D1),
       textColor: Colors.white,
       disabledColor: Colors.grey,
       disabledTextColor: Colors.black,
       padding: EdgeInsets.all(8.0),
-      splashColor: Colors.yellow,
       onPressed: () {
         Navigator.of(context).pushNamed(NavBar.tag);
       },
@@ -73,6 +72,13 @@ class _LoginPageState extends State<LoginPage> {
       onPressed: () {},
     );
 
+    final loginLabel = Text(
+        'Forgot Password',
+        style: TextStyle(color: Colors.white,
+          fontWeight: FontWeight.bold
+        ),
+    );
+
     return Scaffold(
       backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
       body: Center(
@@ -81,6 +87,7 @@ class _LoginPageState extends State<LoginPage> {
           padding: EdgeInsets.only(left: 24.0, right: 24.0),
           children: <Widget>[
             logo,
+            loginLabel,
             SizedBox(height: 48.0),
             email,
             SizedBox(height: 8.0),

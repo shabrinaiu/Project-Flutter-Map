@@ -28,14 +28,14 @@ class CustomTextField extends StatelessWidget {
             hintStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             hintText: hint,
             enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(5),
               borderSide: BorderSide(
                 color: Theme.of(context).primaryColor,
                 width: 2,
               ),
             ),
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(5),
               borderSide: BorderSide(
                 color: Theme.of(context).primaryColor,
                 width: 3,

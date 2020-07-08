@@ -1,42 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'login_page.dart';
 import 'navbar.dart';
-import 'auth/auth.dart';
 
-void main() {
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-      .then((_) {
-    runApp(new MyApp());
-  });
-}
-
-final FirebaseAuth auth = FirebaseAuth.instance;
+void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
+  final routes = <String, WidgetBuilder>{
+    LoginPage.tag: (context) => LoginPage(),
+    NavBar.tag: (context) => NavBar(),
+  };
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'GO',
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-                hintColor: Color(0xFFC0F0E8),
-                primaryColor: Color(0xFF80E1D1),
-                fontFamily: "Montserrat",
-                canvasColor: Colors.transparent),
-            home: new StreamBuilder(
-              stream: auth.onAuthStateChanged,
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  return NavBar();
-                }
-                return LoginRegister();
-              },
-            ),
-            routes: <String, WidgetBuilder>{
-              '/home': (BuildContext context) => new NavBar(),
-              '/login': (BuildContext context) => new LoginRegister()
-            },
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: new ThemeData(
+          primaryColor: Color.fromRGBO(58, 66, 86, 1.0), fontFamily: 'Raleway'),
+      home: new LoginPage(),
+      routes: routes,
     );
   }
 }
